@@ -1,6 +1,13 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{form}[2020/06/20 Document class for exam forms]
 \LoadClass[a4paper]{article}
+% Units
+\RequirePackage{siunitx}
+% CGS units
+\DeclareSIUnit\gal{gal} % gal/galileo unit of acceleration
+\DeclareSIUnit\dyne{dyn} % dyn/dyne unit of force
+\DeclareSIUnit\erg{erg} % erg unit of energy
+\DeclareSIUnit\gauss{G} % G/gauss unit of magnetic field
 
 % % Some work
 % \def\title#1{\gdef\@title{#1}\gdef\@@title{#1}}

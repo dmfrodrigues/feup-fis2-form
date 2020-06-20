@@ -4,20 +4,13 @@
 % Graphics and images
 \usepackage{graphicx}
 	\graphicspath{{./images/}}
-% Encodings (to render letters with diacritics and special characters)
-\usepackage[utf8]{inputenc}
-% Language
-\usepackage[english]{babel}
 % Math stuff
 \usepackage[mathscr]{euscript}
 \usepackage{amsmath,amssymb}
 \usepackage{mathtools}
 \usepackage{enumitem}
 \newcommand{\expnumber}[2]{{#1}\times 10^{#2}} % scientific notation
-\newcommand{\unit}[1]{\ensuremath{\, \mathrm{#1}}}
 \usepackage{esint}
-\usepackage{textcomp}
-\usepackage{gensymb}
 \newcommand{\matr}[1]{\mathbf{#1}} % undergraduate algebra version
 % Definitions, theorems, remarks,...
 \usepackage{amsthm}
@@ -488,16 +481,16 @@ If $\matr{J}_\mathbf{F}$ is symmetrical (as is the case of $\mathbf{E}$), all $\
 	\begin{center}
 		\begin{tabular}{l l | r r r r} \hline \hline
 			\multicolumn{2}{c |}{\textbf{Unit}}  & \textbf{L} & \textbf{M} & \textbf{T} & \textbf{I} \\ \hline
-			$F$&$(\unit{N      })$ &  1  &  1  & -2  &  0  \\
-			$V$&$(\unit{V      })$ &  2  &  1  & -3  & -1  \\
-			$Q$&$(\unit{C      })$ &  0  &  0  &  1  &  1  \\
-			$E$&$(\unit{J      })$ &  2  &  1  & -2  &  0  \\
-			$P$&$(\unit{W      })$ &  2  &  1  & -3  &  0  \\
-			$B$&$(\unit{T      })$ &  0  &  1  & -2  & -1  \\
-			$\Phi_B$&$(\unit{Wb})$ &  2  &  1  & -2  & -1  \\
-			$R$&$(\unit{\Omega })$ &  2  &  1  & -3  & -2  \\
-			$L$&$(\unit{H      })$ &  2  &  1  & -2  & -2  \\
-			$C$&$(\unit{F      })$ & -2  & -1  &  4  &  2  \\ \hline \hline
+			$F$&$(\SI{}{\newton    })$ &  1  &  1  & -2  &  0  \\
+			$V$&$(\SI{}{\volt      })$ &  2  &  1  & -3  & -1  \\
+			$Q$&$(\SI{}{\coulomb   })$ &  0  &  0  &  1  &  1  \\
+			$E$&$(\SI{}{\joule     })$ &  2  &  1  & -2  &  0  \\
+			$P$&$(\SI{}{\watt      })$ &  2  &  1  & -3  &  0  \\
+			$B$&$(\SI{}{\tesla     })$ &  0  &  1  & -2  & -1  \\
+			$\Phi_B$&$(\SI{}{\weber})$ &  2  &  1  & -2  & -1  \\
+			$R$&$(\SI{}{\ohm       })$ &  2  &  1  & -3  & -2  \\
+			$L$&$(\SI{}{\henry     })$ &  2  &  1  & -2  & -2  \\
+			$C$&$(\SI{}{\farad     })$ & -2  & -1  &  4  &  2  \\ \hline \hline
 		\end{tabular}
 	\end{center}
 \end{minipage}%
@@ -506,13 +499,13 @@ If $\matr{J}_\mathbf{F}$ is symmetrical (as is the case of $\mathbf{E}$), all $\
 		\begin{center}
 			\begin{tabular}{r | c | r l} \hline \hline
 		       	 	& \textbf{SI}     & \multicolumn{2}{c}{\textbf{CGS}} \\ \hline
-				$L$ & $\unit{m     }$ & $10^2$&$\unit{cm }$ \\
-				$m$ & $\unit{kg    }$ & $10^3$&$\unit{g  }$ \\
-				$t$ & $\unit{s     }$ & $10^0$&$\unit{s  }$ \\
-				$a$ & $\unit{m\,s^2}$ & $10^2$&$\unit{gal}$ \\
-				$F$ & $\unit{N     }$ & $10^5$&$\unit{dyn}$ \\
-				$E$ & $\unit{J     }$ & $10^7$&$\unit{erg}$ \\
-				$B$ & $\unit{T     }$ & $10^4$&$\unit{G  }$ \\ \hline \hline
+				$L$ & $\SI{}{\metre                }$ & $10^2$&$\SI{}{\cm}$ \\
+				$m$ & $\SI{}{\kilogram             }$ & $10^3$&$\SI{}{\gram}$ \\
+				$t$ & $\SI{}{\second               }$ & $10^0$&$\SI{}{\second}$ \\
+				$a$ & $\SI{}{\metre \per \second ^2}$ & $10^2$&$\SI{}{\gal}$ \\
+				$F$ & $\SI{}{\newton               }$ & $10^5$&$\SI{}{\dyne}$ \\
+				$E$ & $\SI{}{\joule                }$ & $10^7$&$\SI{}{\erg}$ \\
+				$B$ & $\SI{}{\tesla                }$ & $10^4$&$\SI{}{\gauss}$ \\ \hline \hline
 			\end{tabular}
 		\end{center}
 	\end{minipage}%
@@ -520,11 +513,11 @@ If $\matr{J}_\mathbf{F}$ is symmetrical (as is the case of $\mathbf{E}$), all $\
 		\begin{center}
 			\section*{Constants}
 			\begin{tabular}{ l l p{20mm} }
-				Elementary charge & $e = \expnumber{1.602}{-19}$ & [$\unit{C}$]\\
-				Elec. permittivity of vac. & $\varepsilon_0=\expnumber{8.854}{-12}$ & [$\unit{F/m}$] \\
-				Coulomb constant & $k_e=\expnumber{9.0}{9}$ & [$\unit{N \, m^2 \, C^{-2}}$] [$\unit{V\,m\,C^{-1}}$]\\
-				Mag. permeability of vac. & $\mu_0=\expnumber{4\pi}{-7}$ & [$\unit{H\,m^{-1}}$] \\
-				Mag. constant & $k_m=\expnumber{1}{-7}$ & [$\unit{T\,m/A}$]
+				Elementary charge & $e = \expnumber{1.602}{-19}$ & [$\SI{}{C}$]\\
+				Elec. permittivity of vac. & $\varepsilon_0=\expnumber{8.854}{-12}$ & [$\SI{}{F/m}$] \\
+				Coulomb constant & $k_e=\expnumber{9.0}{9}$ & [$\SI{}{N \, m^2 \, C^{-2}}$] [$\SI{}{V\,m\,C^{-1}}$]\\
+				Mag. permeability of vac. & $\mu_0=\expnumber{4\pi}{-7}$ & [$\SI{}{H\,m^{-1}}$] \\
+				Mag. constant & $k_m=\expnumber{1}{-7}$ & [$\SI{}{T\,m/A}$]
 			\end{tabular}
 		\end{center}
 	\end{minipage}
