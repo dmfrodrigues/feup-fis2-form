@@ -2,7 +2,7 @@
 \ProvidesClass{form}[2020/06/20 Document class for exam forms]
 \LoadClass[a4paper]{article}
 % Margins
-\RequirePackage[top=5mm,bottom=5mm,left=5mm,right=5mm]{geometry}
+\RequirePackage[top=17mm,bottom=0mm,left=5mm,right=5mm]{geometry}
 % Units
 \RequirePackage{siunitx}
 % CGS units
@@ -32,5 +32,6 @@
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
+\headsep=0pt
 \fancyhead[R]{\thepage}
-\fancyfoot[L]{\ifx\@@author\@empty\else\@@author\fi}
+\fancyhead[L]{\ifx\@@author\@empty\else\@@author\fi}
