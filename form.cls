@@ -21,10 +21,10 @@
 \RequirePackage{multicol}
 
 % % Some work
-% \def\title#1{\gdef\@title{#1}\gdef\@@title{#1}}
 \def\author#1{\gdef\@author{#1}\gdef\@@author{#1}}
-% \let\@@title\@empty
+\def\title#1{\gdef\@title{#1}\gdef\@@title{#1}}
 \let\@@author\@empty
+\let\@@title\@empty
 
 % Headers and footers
 \RequirePackage{fancyhdr}
@@ -34,4 +34,5 @@
 \renewcommand{\footrulewidth}{0pt}
 \headsep=0pt
 \fancyhead[R]{\thepage}
+\fancyhead[C]{\ifx\@@title\@empty\else\@@title\fi}
 \fancyhead[L]{\ifx\@@author\@empty\else\@@author\fi}
