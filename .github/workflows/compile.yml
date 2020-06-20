@@ -1,0 +1,22 @@
+name: compile
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: apt
+      run: sudo apt install -y texlive-latex-extra #texlive-science latexmk curl
+
+    - name: Compile form
+      run: latexmk -interaction=nonstopmode -pdf form.tex
+    - name: Upload form
+      uses: actions/upload-artifact@v2
+      with:
+        name: form.pdf
+        path: form.pdf
