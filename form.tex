@@ -1,0 +1,566 @@
+\documentclass{form}
+% Margins
+\usepackage[top=5mm,bottom=5mm,left=5mm,right=5mm]{geometry}
+% Graphics and images
+\usepackage{graphicx}
+	\graphicspath{{./images/}}
+% Encodings (to render letters with diacritics and special characters)
+\usepackage[utf8]{inputenc}
+% Language
+\usepackage[english]{babel}
+% Math stuff
+\usepackage[mathscr]{euscript}
+\usepackage{amsmath,amssymb}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\newcommand{\expnumber}[2]{{#1}\times 10^{#2}} % scientific notation
+\newcommand{\unit}[1]{\ensuremath{\, \mathrm{#1}}}
+\usepackage{esint}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\newcommand{\matr}[1]{\mathbf{#1}} % undergraduate algebra version
+% Definitions, theorems, remarks,...
+\usepackage{amsthm}
+\DeclareMathOperator{\tr}{tr}
+\usepackage{physics}
+% Tables
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{multicol}
+% Document
+\begin{document}
+\begin{minipage}[c]{0.25\textwidth}
+	\section*{Electric field}
+\end{minipage}
+\begin{minipage}[c]{0.15\textwidth}
+	\begin{equation*}
+		k_e = \frac{1}{4\pi\varepsilon_0}
+	\end{equation*}
+\end{minipage}
+\begin{minipage}[c]{0.15\textwidth}
+	\begin{equation*}
+		\mathbf{E}_1 = \frac{k_e}{K}\frac{q_1}{r^2}\hat{r}
+	\end{equation*}
+\end{minipage}
+\begin{minipage}[c]{0.15\textwidth}
+	\begin{equation*}
+		\mathbf{F}_{1/2} = \mathbf{E}_1 q_2
+	\end{equation*}
+\end{minipage}
+\begin{center}
+\begin{minipage}[c]{0.10\textwidth}
+	\begin{equation*}
+		U_e=q\,V
+	\end{equation*}
+\end{minipage}
+\begin{minipage}[c]{0.15\textwidth}
+	\begin{equation*}
+		V=-\int_{\infty}^{\vec{P}}{\mathbf{E}\cdot d\mathbf{l}}
+	\end{equation*}
+\end{minipage}
+\begin{minipage}[c]{0.25\textwidth}
+	\begin{equation*}
+		V_{outside\,sphere} = k_e \frac{Q}{r}~~(r>R)
+	\end{equation*}
+\end{minipage}
+\begin{minipage}[c]{0.20\textwidth}
+	\begin{equation*}
+		V_{inside\,sphere} = k_e \frac{Q}{R}
+	\end{equation*}
+\end{minipage}
+\end{center}
+\begin{center}
+\begin{minipage}[c]{0.20\textwidth}
+	\begin{equation*}
+		E_{plane}=2\pi k_e \sigma=\frac{\sigma}{2 \varepsilon_0}
+	\end{equation*}
+\end{minipage}
+\begin{minipage}[c]{0.20\textwidth}
+	\begin{equation*}
+		E_{wire}=2 k_e \frac{\lambda}{d}
+	\end{equation*}
+\end{minipage}
+\begin{minipage}[c]{0.25\textwidth}
+	\begin{equation*}
+		E_{sphere}=k_e \frac{Q}{r^2}~(r>R)
+	\end{equation*}
+\end{minipage}
+\end{center}
+\noindent\rule{\textwidth}{0.4pt}
+\begin{minipage}[c]{0.10\textwidth}
+	\section*{Circuits}
+\end{minipage}
+\begin{minipage}[c]{0.06\textwidth}
+	\begin{equation*}
+		I=\dot{Q}
+	\end{equation*}
+\end{minipage}
+\begin{minipage}[c]{0.22\textwidth}
+	\begin{equation*}
+		P=I\,\Delta V=\frac{\Delta V^2}{R}=RI^2
+	\end{equation*}
+\end{minipage}
+\begin{minipage}[c]{0.59\textwidth}
+	\textbf{Semiconductor}: material with conductivity between isolator and conductor.\\
+	\textbf{N-type semiconductor:} doped with electron donor, creates electron cloud.\\
+	\textbf{P-type semiconductor:} doped with electro acceptor, creates void cloud.
+\end{minipage}\\
+\begin{minipage}[c]{0.15\textwidth}
+	\subsection*{Resistance}
+\end{minipage}
+\begin{minipage}[c]{0.09\textwidth}
+	\begin{equation*}
+		\Delta V = R\,I
+	\end{equation*}
+\end{minipage}
+\begin{minipage}[c]{0.14\textwidth}
+	\begin{alignat*}{2}
+		{\Delta V}_{gen} &= \varepsilon - r\,I \\
+		{\Delta V}_{rec} &= \varepsilon + r\,I
+	\end{alignat*}
+\end{minipage}
+\begin{minipage}[c]{0.09\textwidth}
+	\begin{equation*}
+		R = \rho \frac{L}{A}
+	\end{equation*}
+\end{minipage}
+\begin{minipage}[c]{0.19\textwidth}
+	\begin{equation*}
+		R=R_{20}(1+\alpha_{20}(T-20))
+	\end{equation*}
+\end{minipage}
+\begin{minipage}[c]{0.11\textwidth}
+	\begin{equation*}
+		R_s = \sum_{i=1}^{N}{R_i}
+	\end{equation*}
+\end{minipage}
+\begin{minipage}[c]{0.18\textwidth}
+	\begin{equation*}
+		R_p = \left[\sum_{i=1}^{N}{(R_i)^{-1}}\right]^{-1}
+	\end{equation*}
+\end{minipage} \\
+\begin{minipage}[c]{0.15\textwidth}
+	\subsection*{Capacitance}
+\end{minipage}
+\begin{minipage}[c]{0.06\textwidth}
+	\begin{equation*}
+		C=\frac{Q}{V}
+	\end{equation*}
+\end{minipage}
+\begin{minipage}[c]{0.15\textwidth}
+	\begin{equation*}
+		V_{max} = E_{max}\,d
+	\end{equation*}
+\end{minipage}
+\begin{minipage}[c]{0.10\textwidth}
+	\begin{equation*}
+		U=\frac{1}{2}Q\,\Delta V
+	\end{equation*}
+\end{minipage}
+\begin{minipage}[c]{0.25\textwidth}
+	\begin{equation*}
+		C_{plane} = \frac{K}{k_e}\frac{A}{4\pi d} = K\,\varepsilon_0 \,\frac{A}{d}
+	\end{equation*}
+\end{minipage}
+\begin{minipage}[c]{0.25\textwidth}
+	\begin{equation*}
+		C_{sphere} = \frac{K}{k_e}\left[r_1^{-1}-r_2^{-1}\right]^{-1}
+	\end{equation*}
+\end{minipage}
+\begin{center}
+	\begin{minipage}[c]{0.17\textwidth}
+		\begin{equation*}
+			C_s = \left[\sum_{i=1}^{N}{(C_i)^{-1}}\right]^{-1}
+		\end{equation*}
+	\end{minipage}
+	\begin{minipage}[c]{0.11\textwidth}
+		\begin{equation*}
+			C_p = \sum_{i=1}^{N}{C_i}
+		\end{equation*}
+	\end{minipage}
+	\begin{minipage}[c]{0.70\textwidth}
+		If two capacitors are connected in series, the charge in each capacitor is identical
+	\end{minipage}
+\end{center}
+\noindent\rule{\textwidth}{0.4pt}
+\begin{minipage}[c]{0.15\textwidth}
+	\subsection*{Mesh law}
+\end{minipage}
+\begin{minipage}[c]{0.15\textwidth}
+	\begin{equation*}
+		\matr{\varepsilon}=\matr{R}\matr{i}
+	\end{equation*}
+\end{minipage}
+\begin{minipage}[c]{0.65\textwidth}
+	\begin{tabular}{ r l }
+		$\matr{R}_{aa}$ & Sum of resistances going around mesh $a$ \\
+		$\matr{R}_{ab}$ & Symmetric of the sum of resistantes common to meshes $a$ and $b$\\
+		$\matr{i}_a   $ & Current going around mesh $a$ in a given angular direction\\
+		$\matr{\varepsilon}_a$ & Potential gain by going around mesh $a$ in the same angular direction
+	\end{tabular}
+\end{minipage}\\
+\begin{center} \begin{tabular}{l | c | c | c | c} \hline \hline
+	\multirow{2}{*}{\begin{minipage}[c]{0.25\textwidth}\subsection*{Potential gains/falls} \end{minipage}} & \textbf{Battery} & \textbf{Capacitor} & \textbf{Resistor} & \textbf{Inductor} \\
+	& (Creates potential) & (Opposes charge build-up) & (Opposes $I$) & (Opposes changes in $I$)\\ \hline
+	\multirow{2}{*}{Diff. equations} & $+\varepsilon$ & $-Q/C$ & $-RI$ & $-L\dot{I}$\\
+	& $+\varepsilon$ & $-Q/C$ & $-R\dot{Q}$ & $-L\ddot{Q}$\\ \hline
+	Impedance $Z(s)$ & $+\varepsilon/s$ & $\dfrac{1}{C\,s}$ & $R$ & $L\,s$ \\ \hline \hline
+\end{tabular} \end{center}
+\begin{minipage}[c]{0.12\textwidth}
+	\section*{Magnetic field}
+\end{minipage}
+\begin{minipage}[c]{0.07\textwidth}
+	\begin{equation*}
+		k_m=\frac{\mu_0}{4\pi}
+	\end{equation*}
+\end{minipage}
+\begin{minipage}[c]{0.21\textwidth}
+	\begin{equation*}
+		\mathbf{F}_{Lorentz}=q(\mathbf{E}+\mathbf{v}\times\mathbf{B})
+	\end{equation*}
+\end{minipage}
+\begin{minipage}[c]{0.14\textwidth}
+	\begin{equation*}
+		F_{centrip.}=\frac{m\,v^2}{r}
+	\end{equation*}
+\end{minipage}
+\begin{minipage}[c]{0.11\textwidth}
+	\begin{equation*}
+		r_{curv}=\dfrac{m\,v}{q\,B}
+	\end{equation*}
+\end{minipage}
+\begin{minipage}[c]{0.08\textwidth}
+	\begin{equation*}
+		\omega=\dfrac{q\,B}{m}
+	\end{equation*}
+\end{minipage}
+\begin{minipage}[c]{0.12\textwidth}
+	\begin{equation*}
+		\mathbf{M}=\mathbf{m}\times \mathbf{B}
+	\end{equation*}
+\end{minipage}
+\begin{minipage}[c]{0.12\textwidth}
+	\begin{equation*}
+		\mathbf{m}_{loop}=A\,I\,\widehat{e}_n
+	\end{equation*}
+\end{minipage} \\
+\begin{minipage}[c]{0.15\textwidth}
+	\subsection*{Wires}
+\end{minipage}
+\begin{minipage}[c]{0.20\textwidth}
+	\begin{equation*}
+		\mathbf{F}_{B/wire}=l\,\mathbf{I}\times\mathbf{B}
+	\end{equation*}
+\end{minipage}
+\begin{minipage}[c]{0.35\textwidth}
+	\begin{equation*}
+		B_{wire}=\frac{2\,k_m\,I}{r} \iff \mathbf{r}\times\mathbf{B}_{wire}=2 k_m \mathbf{I}
+	\end{equation*}
+\end{minipage}
+\begin{minipage}[c]{0.25\textwidth}
+	\begin{equation*}
+		\mathbf{F}_{1/2}=-\frac{2\,k_m\,l\,I_1 \cdot I_2}{r}\mathbf{\hat{r}_{1\rightarrow 2}}
+	\end{equation*}
+\end{minipage}\\
+\begin{minipage}[c]{0.19\textwidth}
+	\subsection*{Signal processing}
+\end{minipage}%
+\begin{minipage}[c]{0.16\textwidth}
+	\begin{equation*}
+		\tilde{V}(s)=Z(s)\,\tilde{I}(s)
+	\end{equation*}
+\end{minipage}%
+\begin{minipage}[c]{0.10\textwidth}
+	\begin{equation*}
+		Z_s = \sum_{i=1}^{N}{Z_i}
+	\end{equation*}
+\end{minipage}%
+\begin{minipage}[c]{0.16\textwidth}
+	\begin{equation*}
+		Z_p = \left[\sum_{i=1}^{N}{Z_i^{-1}}\right]^{-1}
+	\end{equation*}
+\end{minipage}%
+\begin{minipage}[c]{0.38\textwidth}
+	\begin{equation*}
+		\text{Transference function $H(s)$: } \tilde{V_f}(s)=H(s)\tilde{V_i}(s)
+	\end{equation*}
+\end{minipage}
+\begin{center}
+	\begin{minipage}[c]{0.1\textwidth}
+		\begin{equation*}
+			t_C=R\,C
+		\end{equation*}
+	\end{minipage}
+	\begin{minipage}[c]{0.1\textwidth}
+		\begin{equation*}
+			t_L=L/R
+		\end{equation*}
+	\end{minipage}
+	\begin{minipage}[c]{0.2\textwidth}
+		\begin{equation*}
+			\text{RC: } Q(t)=Q_0\,e^{-t/t_C}
+		\end{equation*}
+	\end{minipage}
+\end{center}
+\vspace*{-2em}
+\section*{Notions}
+\begin{center}
+	\begin{tabular}{c c | c c}
+		Flux of $\mathbf{F}$ over a surface & $\displaystyle \Phi_{\mathbf{F}}= \iint_S{\mathbf{F}\cdot d\mathbf{S}} = \mathbf{F} \cdot \mathbf{S} = F\,A\,\cos\theta$ & Conservative field & $\exists \varphi \colon \mathbf{F}=-\nabla \varphi~~~\Delta \varphi = -\int_C{\mathbf{F}\cdot d\mathbf{l}}$
+	\end{tabular}
+\end{center}
+\vspace*{-1.5em}
+\section*{Maxwell's equations}
+\vspace*{-1em}
+\begin{center}
+	{ \small
+	\begin{tabular}{c | c | c | c | p{39mm}}
+		\textbf{Name} & \textbf{Short form} & \textbf{Integrals} & \textbf{Differentials} & \textbf{Alternatives} \\ \hline
+		Gauss & $\displaystyle \Phi_{\mathbf{E}}=\frac{Q}{\varepsilon_0}$ & $\displaystyle \oiint_{\partial \Omega}{\mathbf{E}\cdot d\mathbf{S}}=\frac{1}{\varepsilon_0}\iiint_{\Omega}{\rho}\,dV$ & $\displaystyle \nabla \cdot \mathbf{E} = \frac{\rho}{\varepsilon_0} $ & $\Phi_{\mathbf{E}}=4\pi k_e Q$ \\
+		Gauss $\mathbf{B}$ & $\displaystyle \Phi_{\mathbf{B}} = 0$ & $\displaystyle \oiint_{\partial \Omega}{\mathbf{B}\cdot d\mathbf{S}}=0$ & $\displaystyle \nabla \cdot \mathbf{B} = 0$ \\
+		Faraday & $\displaystyle \varepsilon_i = -\frac{d\Phi_{\mathbf{B}}}{dt}$ & $\displaystyle \oint_{\partial \Sigma}{\mathbf{E}\cdot d\mathbf{l}}=-\frac{d}{dt}\iint_\Sigma {\mathbf{B}\cdot d\mathbf{S}}$ & $\displaystyle \nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}$ & ${\displaystyle \varepsilon_i=L|\mathbf{v}\times\mathbf{B}|=-L\frac{dI}{dt}}$ ${\mathbf{E}_i = \mathbf{v}\times\mathbf{B}}$ \\
+		Ampère & $\displaystyle \oint{\mathbf{B} \cdot d\mathbf{l}}=\mu_0 I_{enc}$ & $\displaystyle \oint_{\partial \Sigma}{\mathbf{B} \cdot d\mathbf{l}}=\mu_0\left(\iint_\Sigma {\mathbf{J} \cdot d\mathbf{S}}+\varepsilon_0 \frac{d}{dt} \iint_\Sigma {\mathbf{E} \cdot d\mathbf{S}}\right)$ & $\displaystyle \nabla \times \mathbf{B} = \mu_0\left(\mathbf{J}+\varepsilon_0 \frac{\partial \mathbf{E}}{\partial t}\right)$ & $\displaystyle \oint_{C}{\mathbf{B}\cdot d\mathbf{l}}=4\pi k_m I_{enc}$
+	\end{tabular}
+	}
+\end{center}
+\vspace*{-1.5em}
+\section*{Maxima}
+\vspace*{-0.5em}
+\begin{center} \begin{tabular}{p{20mm} | l || l | l || p{26mm} | l}
+	Magnitude/ Dot product & \begin{minipage}[c]{0.21\textwidth} \texttt{sqrt({[1,2,3]}.{[2,3,4]});\\{[1,2,3]}.{[2,3,4]};} \end{minipage} & 
+	$\dot{x}=\dfrac{dx}{dt}$ & \begin{minipage}[c]{0.15\textwidth} \texttt{gradef(x,t,x1);} \end{minipage} & 
+	Laplace/ Inverse Laplace & \begin{minipage}[c]{0.19\textwidth} 		\texttt{Vi\_:laplace(Vi,t,s);\\
+	Vf:ilt(Vf\_,s,t);} \end{minipage} \\ \hline \hline
+	Mesh law & \multicolumn{3}{l ||}{\begin{minipage}[c]{0.30\textwidth} \texttt{eq:e\_=R\_.i\_;\\
+		eq1:lhs(eq)[1][1]=rhs(eq)[1][1];\\
+		eq2:lhs(eq)[2][1]=rhs(eq)[2][1];\\
+		solve([eq1,eq2],[i2,R]);
+	} \end{minipage}} & 
+	Cross product & \begin{minipage}[c]{0.17\textwidth} \texttt{load("vect"); \\
+		{[1,2,3]}$\sim${[2,3,4]};\\
+		express(\%);
+	} \end{minipage}
+\end{tabular} \end{center}
+\begin{minipage}[c]{0.19\textwidth}
+	\section*{DC circuits}
+	\begin{equation*}
+		\lambda=\frac{R}{2L}
+	\end{equation*}
+\end{minipage}
+\begin{minipage}[c]{0.54\textwidth}
+	\begin{center}
+		\begin{tabular}{c | l | c} \hline \hline
+			$CR^2-4L < 0$ & $\displaystyle I=\frac{\varepsilon}{L \omega}e^{-\lambda t} \sin(\omega t)$ & $\displaystyle \omega = \sqrt{\frac{1}{LC}-\frac{1}{4}\frac{R^2}{L^2}}$ \\
+			$CR^2-4L = 0$ & $\displaystyle I=\frac{\varepsilon}{L t^{-1}}e^{-\lambda t}$ \\
+			$CR^2-4L > 0$ & $\displaystyle I=\frac{\varepsilon}{L \omega}e^{-\lambda t} \sinh(\omega t)$ & $\displaystyle \omega = \sqrt{\frac{1}{4}\frac{R^2}{L^2}-\frac{1}{LC}}$ \\
+		\end{tabular}
+	\end{center}
+\end{minipage}
+\begin{minipage}[c]{0.24\textwidth}
+	\section*{Useful formulas} \vspace*{-1em}
+	\begin{alignat*}{2}
+		&A\ddot{V}+B\dot{V}+CV=\\
+		&D\ddot{V_e}+E\dot{V_e}+FV_e \iff \\
+		&\frac{\tilde{V}}{\tilde{V_e}}=H(s)=\frac{Ds^2+Es+F}{As^2+Bs+C}		
+	\end{alignat*}
+\end{minipage}\\
+\begin{minipage}[c]{0.43\textwidth}
+	\section*{AC circuits}
+	Impedance: replace $s=i\,\omega$.\\
+	Low-pass filter: RC circuit, $V_f$ measured in capacitor.\\
+	High-pass filter: RC circuit, $V_f$ measured in resistance.\\
+	When filters are put in sequence, their response functions $H_1$, $H_2$ are multiplied: $H=H_1\,H_2$
+	\begin{equation*}
+		Z=R+i\,X
+	\end{equation*}
+\end{minipage}%
+\begin{minipage}[c]{0.55\textwidth}
+	\textbf{RLC:}\\
+	\begin{minipage}[c]{0.53\textwidth}
+		\begin{equation*}
+			Z =R+i\,\left(L\omega-\frac{1}{C\omega}\right)=|Z|\,e^{i\,\varphi_Z}
+		\end{equation*}
+	\end{minipage}
+	\begin{minipage}[c]{0.43\textwidth}
+		\begin{equation*}
+			|Z|=\sqrt{R^2+(L\omega-1/C\omega)^2} 
+		\end{equation*}
+	\end{minipage}
+	\begin{minipage}[c]{0.37\textwidth}
+		\begin{equation*}
+			\varphi_Z =\tan^{-1}\frac{L\omega-1/C\omega}{R}
+		\end{equation*}
+	\end{minipage}
+	\begin{minipage}[c]{0.32\textwidth}
+		\begin{equation*}
+			I    = \frac{V_{max}}{|Z|}e^{i(\omega t - \varphi_Z)}
+		\end{equation*}
+	\end{minipage}
+	\begin{minipage}[c]{0.27\textwidth}
+		\begin{equation*}
+			I_{max} = V_{max}/|Z|
+		\end{equation*}
+	\end{minipage}
+\end{minipage}\\
+\begin{minipage}[c]{0.18\textwidth}
+	\begin{equation*}
+		V=V_{max}\cos{\omega t + \varphi_V}
+	\end{equation*}
+\end{minipage}
+\begin{minipage}[c]{0.18\textwidth}
+	\begin{equation*}
+		I=I_{max}\cos{\omega t + \varphi_I}
+	\end{equation*}
+\end{minipage}
+\begin{minipage}[c]{0.19\textwidth}
+	\begin{equation*}
+		\text{Power factor: } \cos \varphi_Z
+	\end{equation*}
+\end{minipage}
+\begin{minipage}[c]{0.43\textwidth}
+	\begin{equation*}
+		P=VI=\frac{1}{2}V_{max}I_{max}[\cos(2\omega t + \varphi_V + \varphi_I) + \cos \varphi_Z]
+	\end{equation*}
+\end{minipage}
+\begin{minipage}[c]{0.1\textwidth}
+	\begin{equation*}
+		V_{ef}=\frac{V_{max}}{\sqrt{2}}
+	\end{equation*}
+\end{minipage}
+\begin{minipage}[c]{0.1\textwidth}
+	\begin{equation*}
+		I_{ef}=\frac{I_{max}}{\sqrt{2}}
+	\end{equation*}
+\end{minipage}
+\begin{minipage}[c]{0.15\textwidth}
+	\begin{equation*}
+		\overline{P}=V_{ef}I_{ef}\cos \varphi_Z
+	\end{equation*}
+\end{minipage}
+\begin{minipage}[c]{0.45\textwidth}
+	\begin{equation*}
+		\text{A circuit resonates when } \Im{Z}=0 \iff \omega = (LC)^{-\frac{1}{2}}
+	\end{equation*}
+\end{minipage}\\
+\begin{multicols}{2}
+\section*{Dynamical systems}
+A vector field $\mathbf{F}$ is \textbf{conservative} iff there exists a scalar field $\varphi$ such that $\nabla \varphi = \mathbf{F}$. \par
+For a conservative field, is is true that $\nabla \times \mathbf{F} = \mathbf{0}$.
+\begin{equation*}
+\nabla \cdot \mathbf{F} = \tr(\matr{J}_{\mathbf{F}}) = \sum{\lambda_i}
+\end{equation*}\par
+If $\nabla \cdot \mathbf{F}=0$, then it is impossible to have all $\lambda_i$ positive or all negative, thus the field \textbf{does not have nodes nor focii}.
+Thus, it only has \textbf{centers} or \textbf{saddles}.
+If $\matr{J}_\mathbf{F}$ is symmetrical (as is the case of $\mathbf{E}$), all $\lambda_i$ are real, and the only equilibrium points are \textbf{nodes} or \textbf{saddles}.
+\end{multicols}
+\begin{center}
+\begin{minipage}[c]{0.43\textwidth}
+	Two-dimensional systems: \\ \\
+	\begin{tabular}{p{24mm} p{22mm} p{24mm}} \hline \hline
+		\textbf{Type of point} & \textbf{Eigenvalues} & \textbf{Stability} \\ \hline
+			\multirow{2}{*}{Node } & \multirow{2}{20mm}{Reals with same sign} & Unstable (+) \\
+			                       &                                          & Stable (-) \\ \hline
+			\multirow{2}{*}{Improper node} & \multirow{2}{*}{One real}               & Unstable (+) \\
+			                               &                                         & Stable (-)\\ \hline
+			Saddle & Reals with different signs & Unstable \\ \hline
+			\multirow{2}{*}{Focus} & \multirow{2}{20mm}{Complexes with $\Re \neq 0$} & Unstable ($\Re$+) \\
+			                       &                                                 & Stable ($\Re$-) \\ \hline
+			Center                 & Complexes with $\Re = 0$                        & Stable
+		\\ \hline \hline
+	\end{tabular}
+\end{minipage}%
+\begin{minipage}[c]{0.57\textwidth}
+	Three-dimensional systems:\\ \\
+	\begin{tabular}{p{24mm} p{52mm} p{25mm}} \hline \hline
+		\textbf{Type of point} & \textbf{Eigenvalues} & \textbf{Stability} \\ \hline
+		\multirow{2}{*}{Node} & \multirow{2}{52mm}{All reals with same sign} & Unstable (-) \\
+		                      &                                & Stable (+) \\ \hline
+		Saddle                & At least one negative and one positive real & Unstable \\ \hline
+		\multirow{2}{*}{Focus-node} & \multirow{2}{52mm}{One real and a complex-conjugate pair, all real parts with same sign} & Unstable (+) \\
+		                            & & Stable(-)\\ \hline
+		Saddle-focus          & One real with sign different than real part of the complex-conjugate pair & Unstable \\ \hline
+		Center                & Complexes with $\Re = 0$ & Stable
+		\\ \hline \hline
+	\end{tabular}
+\end{minipage} \end{center}
+\begin{minipage}[c]{0.26\textwidth}
+	\section*{Dimensional analysis}
+	\begin{center}
+		\begin{tabular}{l l | r r r r} \hline \hline
+			\multicolumn{2}{c |}{\textbf{Unit}}  & \textbf{L} & \textbf{M} & \textbf{T} & \textbf{I} \\ \hline
+			$F$&$(\unit{N      })$ &  1  &  1  & -2  &  0  \\
+			$V$&$(\unit{V      })$ &  2  &  1  & -3  & -1  \\
+			$Q$&$(\unit{C      })$ &  0  &  0  &  1  &  1  \\
+			$E$&$(\unit{J      })$ &  2  &  1  & -2  &  0  \\
+			$P$&$(\unit{W      })$ &  2  &  1  & -3  &  0  \\
+			$B$&$(\unit{T      })$ &  0  &  1  & -2  & -1  \\
+			$\Phi_B$&$(\unit{Wb})$ &  2  &  1  & -2  & -1  \\
+			$R$&$(\unit{\Omega })$ &  2  &  1  & -3  & -2  \\
+			$L$&$(\unit{H      })$ &  2  &  1  & -2  & -2  \\
+			$C$&$(\unit{F      })$ & -2  & -1  &  4  &  2  \\ \hline \hline
+		\end{tabular}
+	\end{center}
+\end{minipage}%
+\begin{minipage}[c]{0.74\textwidth}
+	\begin{minipage}[c]{0.31\textwidth}
+		\begin{center}
+			\begin{tabular}{r | c | r l} \hline \hline
+		       	 	& \textbf{SI}     & \multicolumn{2}{c}{\textbf{CGS}} \\ \hline
+				$L$ & $\unit{m     }$ & $10^2$&$\unit{cm }$ \\
+				$m$ & $\unit{kg    }$ & $10^3$&$\unit{g  }$ \\
+				$t$ & $\unit{s     }$ & $10^0$&$\unit{s  }$ \\
+				$a$ & $\unit{m\,s^2}$ & $10^2$&$\unit{gal}$ \\
+				$F$ & $\unit{N     }$ & $10^5$&$\unit{dyn}$ \\
+				$E$ & $\unit{J     }$ & $10^7$&$\unit{erg}$ \\
+				$B$ & $\unit{T     }$ & $10^4$&$\unit{G  }$ \\ \hline \hline
+			\end{tabular}
+		\end{center}
+	\end{minipage}%
+	\begin{minipage}[c]{0.69\textwidth}
+		\begin{center}
+			\section*{Constants}
+			\begin{tabular}{ l l p{20mm} }
+				Elementary charge & $e = \expnumber{1.602}{-19}$ & [$\unit{C}$]\\
+				Elec. permittivity of vac. & $\varepsilon_0=\expnumber{8.854}{-12}$ & [$\unit{F/m}$] \\
+				Coulomb constant & $k_e=\expnumber{9.0}{9}$ & [$\unit{N \, m^2 \, C^{-2}}$] [$\unit{V\,m\,C^{-1}}$]\\
+				Mag. permeability of vac. & $\mu_0=\expnumber{4\pi}{-7}$ & [$\unit{H\,m^{-1}}$] \\
+				Mag. constant & $k_m=\expnumber{1}{-7}$ & [$\unit{T\,m/A}$]
+			\end{tabular}
+		\end{center}
+	\end{minipage}
+	\begin{center}
+		\begin{tabular}{c | c | c | c | c | c | c | c}
+			$y$ & $z$ & $a$ & $f$ & $p$ & $n$ & $\mu$ & $m$ \\
+			$10^{-24}$ &$10^{-21}$ &$10^{-18}$ & $10^{-15}$ & $10^{-12}$ & $10^{-9}$ & $10^{-6}$ & $10^{-3}$ \\ \hline \hline
+			$k$ & $M$ & $G$ & $T$ & $P$ & $E$ & $Z$ & $Y$ \\
+			$10^{3}$ &$10^{6}$ &$10^{9}$ &$10^{12}$ & $10^{15}$ &$10^{18}$ &$10^{21}$ &$10^{24}$
+		\end{tabular}
+	\end{center}
+\end{minipage}\\ \\ \\
+\begin{minipage}[c]{0.40\textwidth}
+\section*{Laplace transform} \vspace*{-2em}
+\begin{alignat*}{2}
+	&\mathcal{L}\{f(t)        &&\}=\tilde{f}(s)=\int_0^{\infty}{f(t)\,e^{-st}\,dt} \\
+	&\mathcal{L}\{f^{(n)}(t)  &&\}=s^n\tilde{f}(s)-\sum_{k=1}^{n}{s^{n-k}f^{k-1}(0)}\\
+	&\mathcal{L}\{k\,f(t)     &&\}=k\,\tilde{f}(s)   \\
+	&\mathcal{L}\{f(t-a)\,u(t-a)&&\}=e^{-as}\tilde{f}(s)
+\end{alignat*}
+\end{minipage}%
+\begin{minipage}[c]{0.20\textwidth}
+\begin{alignat*}{2}
+	&\mathcal{L}\{t^n         &&\}=\frac{n!}{s^{n+1}}\\
+	&\mathcal{L}\{e^{at}\,f(t)&&\}=\tilde{f}(s-a)\\
+	&\mathcal{L}\{\delta(t)   &&\}=1                 \\
+	&\mathcal{L}\{\sin{(\omega t)}&&\}=\frac{\omega}{s^2+\omega^2} \\
+	&\mathcal{L}\{\cos{(\omega t)}&&\}=\frac{s}{s^2+\omega^2}
+\end{alignat*}
+\end{minipage}%
+\begin{minipage}[c]{0.40\textwidth}
+\section*{Trigonometric identities} \vspace*{-2em}
+\begin{alignat*}{2}
+	a\,\cos x+b\,\sin x &=c\,\cos(x-\varphi)\\
+	c &= \sqrt{a^2+b^2}\\
+	\varphi &= \arctan2(b,a)
+\end{alignat*}
+\end{minipage}
+\end{document}
