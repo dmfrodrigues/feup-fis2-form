@@ -1,6 +1,8 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{form}[2020/06/20 Document class for exam forms]
 \LoadClass[a4paper]{article}
+% Margins
+\RequirePackage[top=5mm,bottom=5mm,left=5mm,right=5mm]{geometry}
 % Units
 \RequirePackage{siunitx}
 % CGS units
@@ -8,24 +10,27 @@
 \DeclareSIUnit\dyne{dyn} % dyn/dyne unit of force
 \DeclareSIUnit\erg{erg} % erg unit of energy
 \DeclareSIUnit\gauss{G} % G/gauss unit of magnetic field
+% Math stuff
+\RequirePackage{mathtools}
+\RequirePackage{esint}
+\newcommand{\matr}[1]{\mathbf{#1}} % undergraduate algebra version
+\DeclareMathOperator{\tr}{tr}
+\RequirePackage{physics}
+% Tables
+\RequirePackage{multirow}
+\RequirePackage{multicol}
 
 % % Some work
 % \def\title#1{\gdef\@title{#1}\gdef\@@title{#1}}
-% \def\author#1{\gdef\@author{#1}\gdef\@@author{#1}}
+\def\author#1{\gdef\@author{#1}\gdef\@@author{#1}}
 % \let\@@title\@empty
-% \let\@@author\@empty
+\let\@@author\@empty
 
-% % Other options
-% \RequirePackage[top=15mm,bottom=20mm,left=10mm,right=10mm,headsep=4mm]{geometry}
-% \RequirePackage{titlesec}
-% \titlespacing{\subsection}{0pt}{0pt}{0pt}
-
-% % Headers and footers
-% \RequirePackage{fancyhdr}
-% \pagestyle{fancy}
-% \fancyhf{}
-% \renewcommand{\headrulewidth}{0pt}
-% \renewcommand{\footrulewidth}{0pt}
-% \fancyhead[RE, LO]{\textit{\leftmark}}
-% \fancyhead[LE, RO]{\thepage}
-% \fancyfoot[LE, RO]{\ifx\@@author\@empty\else\@@author\fi}
+% Headers and footers
+\RequirePackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyhead[R]{\thepage}
+\fancyfoot[L]{\ifx\@@author\@empty\else\@@author\fi}
