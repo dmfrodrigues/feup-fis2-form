@@ -10,8 +10,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: apt
-      run: sudo apt install -y texlive-latex-extra #texlive-science latexmk curl
+    - name: Install latex
+      run: sudo apt install -y latexmk texlive-latex-extra #texlive-science latexmk curl
 
     - name: Compile form
       run: latexmk -interaction=nonstopmode -pdf form.tex
