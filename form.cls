@@ -32,7 +32,10 @@
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-\headsep=0pt
-\fancyhead[R]{\thepage}
-\fancyhead[C]{\ifx\@@title\@empty\else\@@title\fi}
+\headsep=10pt
+\newcommand{\vcenteredinclude}[1]{\begingroup
+\setbox0=\hbox{\includegraphics[scale=0.1]{#1}}%
+\parbox{\wd0}{\box0}\endgroup}
+\fancyhead[R]{Licensed under \href{https://creativecommons.org/licenses/by-nc-nd/4.0/}{CC BY-NC-ND 4.0 \vcenteredinclude{by-nc-nd-eu}}}
+\fancyhead[C]{\textbf{\ifx\@@title\@empty\else\@@title\fi}}
 \fancyhead[L]{\ifx\@@author\@empty\else\@@author\fi}
