@@ -1,8 +1,9 @@
-name: compile
+name: docs-release
 
 on:
   push:
-    branches: [ master ]
+    tags:
+      - 'v*'
 
 jobs:
   build:
@@ -10,11 +11,17 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: Set version
+      run: echo ::set-env name=VERSION::${GITHUB_REF#refs/*/}
+
+    - name: Checkout right version
+      run: git checkout $(git rev-list -n 1 $VERSION)
+
     - name: Install latex
       run: sudo apt install -y latexmk texlive-latex-extra texlive-science
 
     - name: Compile form
-      run: latexmk -interaction=nonstopmode -pdf form.tex
+      run: make form.pdf VERSION=${VERSION:1:100}
     - name: Upload form
       uses: actions/upload-artifact@v2
       with:
