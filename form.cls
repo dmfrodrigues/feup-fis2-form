@@ -16,16 +16,19 @@
 \newcommand{\matr}[1]{\mathbf{#1}} % undergraduate algebra version
 \DeclareMathOperator{\tr}{tr}
 \RequirePackage{physics}
+\newcommand\unitvec[1]{\hat{#1}}
+\renewcommand\div{\vec{\nabla} \cdot }
+\RequirePackage{xfrac} % \sfrac
 % Tables
 \RequirePackage{multirow}
 \RequirePackage{multicol}
-
-% % Some work
+\usepackage{tabularx}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+% Some work
 \def\author#1{\gdef\@author{#1}\gdef\@@author{#1}}
 \def\title#1{\gdef\@title{#1}\gdef\@@title{#1}}
 \let\@@author\@empty
 \let\@@title\@empty
-
 % Headers and footers
 \RequirePackage{fancyhdr}
 \pagestyle{fancy}
@@ -36,6 +39,6 @@
 \newcommand{\vcenteredinclude}[1]{\begingroup
 \setbox0=\hbox{\includegraphics[scale=0.1]{#1}}%
 \parbox{\wd0}{\box0}\endgroup}
-\fancyhead[R]{Licensed under \href{https://creativecommons.org/licenses/by-nc-nd/4.0/}{CC BY-NC-ND 4.0 \vcenteredinclude{by-nc-nd-eu}}}
+\fancyhead[R]{\rightmark}
 \fancyhead[C]{\textbf{\ifx\@@title\@empty\else\@@title\fi}}
 \fancyhead[L]{\ifx\@@author\@empty\else\@@author\fi}
