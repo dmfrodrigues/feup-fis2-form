@@ -18,4 +18,4 @@ The equations form is also compiled by Github Actions; to see more recent versio
 
 © 2020 Diogo Rodrigues
 
-All files are licensed under [GNU General Public License v3](LICENSE) by **© 2020 Diogo Rodrigues**.
+All files are licensed under [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International Public License](LICENSE) by **© 2020 Diogo Rodrigues**.
